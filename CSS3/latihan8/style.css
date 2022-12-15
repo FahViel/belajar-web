@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+}
+
+img{
+    width: 300px;
+    height: 350px;
+    filter: grayscale(100%);
+}

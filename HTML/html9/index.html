@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Form</title>
+</head>
+<body>
+     <form action="">
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <td>
+                    <label for="username">Username :</label>
+                </td>
+                <td>
+                    <input type="text" id="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password :</label>
+                </td>
+                <td>
+                    <input type="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="middle">
+                    <label for="pria">Pria</label>
+                    <input type="radio" id="pria" name="jeniskelamin">
+                    <label for="wanita"> Wanita</label>
+                    <input type="radio" id="wanita" name="jeniskelamin">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="middle">
+                    <input type="checkbox" id="menyanyi"><label for="menyanyi">Menyanyi</label>
+                    <input type="checkbox" id="olahraga"><label for="olahraga">Olahraga</label>
+                    <input type="checkbox" id="ngoding"><label for="ngoding">Ngoding</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="kota">Kota Asal :</label>
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">Bandung</option>
+                        <option value="">Yogyakarta</option>
+                        <option value="">Surabaya</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="komentar">Komentar :</label>
+                </td>
+                <td>
+                    <textarea name="komentar" id="komentar" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="middle">
+                    <button>Kirim!</button>
+                </td>
+            </tr>
+        </table>
+     </form>
+</body>
+</html>

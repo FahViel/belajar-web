@@ -1,0 +1,16 @@
+.navigasi{
+    background-color: pink;
+}
+.judul{
+    background-color: green;
+}
+.gambar img{
+    height: 200px;
+}
+.gambar{
+    background-color: white;
+}
+.artikel{
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
