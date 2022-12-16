@@ -71,7 +71,16 @@
 
 // console.log(angka2.join(' - '));
 
-var angka = [1,4,2,5,3,7,6,9,8];
+// var angka = [1,4,2,5,3,7,6,9,8];
 // 8. sort 
-angka.sort();
-console.log(angka.join(' - '));
+// angka.sort();
+// console.log(angka.join(' - '));
+
+
+// 9. Filter & Find
+var angka = [1,4,2,5,3,7,6,9,8];
+var angka2 = angka.find(function (x) {
+    return x > 5;
+});
+
+console.log(angka2);
