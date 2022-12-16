@@ -23,8 +23,6 @@
 
 // Method pada Array
 
-
-var arr = ["Muhammad", "Fahri", "Maulana"];
 // 1. Join
     // console.log(arr.join(' '));
 
@@ -36,4 +34,20 @@ var arr = ["Muhammad", "Fahri", "Maulana"];
 // arr.unshift('Ari');
 // arr.shift();
 
+// console.log(arr.join(' '));
+
+// var arr = ["Muhammad", "Fahri", "Maulana"];
+
+// 4. Splice
+// splice(indexAwal, mauDihapusBerapa, elemenBaru1, elemenBaru2,...)
+// arr.splice(1, 2, 'Ari', 'Nizar');
+// console.log(arr.join(' '));
+
+// 5. Slice
+// slice(awal, akhir)
+var arr = ["Muhammad", "Fahri", "Maulana","Ari", "Nizar"];
+
+var arr2 = arr.slice(1,4);
+
 console.log(arr.join(' '));
+console.log(arr2.join(' '));
