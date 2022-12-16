@@ -45,9 +45,33 @@
 
 // 5. Slice
 // slice(awal, akhir)
-var arr = ["Muhammad", "Fahri", "Maulana","Ari", "Nizar"];
+// var arr = ["Muhammad", "Fahri", "Maulana","Ari", "Nizar"];
 
-var arr2 = arr.slice(1,4);
+// var arr2 = arr.slice(1,4);
 
-console.log(arr.join(' '));
-console.log(arr2.join(' '));
+// console.log(arr.join(' '));
+// console.log(arr2.join(' '));
+
+// 6. foreach
+
+// angka.forEach(
+//     function (e) {
+//         console.log(e);
+//     }
+// );
+
+// nama.forEach(function (e, i) {
+//     console.log('Mahasiswa ke-' + (i+1) + ' Adalah : ' + e);
+// });
+
+// 7. Map
+// var angka2 = angka.map(function (e) {
+//     return e * 2;
+// });
+
+// console.log(angka2.join(' - '));
+
+var angka = [1,4,2,5,3,7,6,9,8];
+// 8. sort 
+angka.sort();
+console.log(angka.join(' - '));
