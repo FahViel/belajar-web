@@ -12,5 +12,5 @@ nomor2.sort(function(a, b) {
   return b - a;
 });
 
-console.log(nomor2); // Output: [9, 7, 5, 2, 1]
+console.log(nomor2);
 
