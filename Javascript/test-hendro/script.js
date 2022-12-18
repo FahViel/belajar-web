@@ -29,4 +29,16 @@ for ( i = 0; i < nomor2.length; i++) {
 
 console.log(nomor2);
 
+// Mencari nilai terbesar
+
+var nomor3 = [2, 5, 9, 1, 7];
+var nilaiTerbesar = nomor3[0];
+
+for ( i = 1; i < nomor3.length; i++) {
+  if (nomor3[i] > nilaiTerbesar) {
+    nilaiTerbesar = nomor3[i];
+  }
+}
+
+console.log(nilaiTerbesar); 
 
