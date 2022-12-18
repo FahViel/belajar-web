@@ -1,0 +1,98 @@
+Hasil Belajar Web dev :
+
+Belajar Web Pemrogaman :
+
+CSS Dasar :
+
+- inheritance
+- Specificity
+
+CSS Layouting :
+
+- Display
+- Dimensi & Layouting
+- Box Model : Margin, Padding, Border & Box Sizing
+- CSS Reset
+- Float (Website Sederhana)
+- Position : Static & Relative
+- Position : Absolute & Fixed
+- Z-Index & Penggunaan lain position
+- Latihan Position (Lanjutan Website sederhana)
+
+CSS3 :
+- Border radius
+- Opacity
+- RGB & HSLA
+- Box Shadow
+- Text Shadow
+- Liner Gradient
+- Radial Gradient
+- Font Face
+- Web Font Generator
+- Web Prefix
+- Filter
+- Transform
+- Transition
+- Animation
+- Project Website Galeri Foto + Lightbox
+
+Bootstrap 5 :
+- Website Portofolio
+
+GIT & GITHUB :
+Git graph : alias graph="git log --all --decorate --oneline --graph"
+
+- Apa itu github
+- Bekerja dengan Git Hub
+- Github : Branch
+- Github : Fork
+- Bekerja dengan GIT
+- GIT BRANCH & MERGE
+- GIT Merge Conflict
+- GIT Remote
+- GIT Multiple Remote
+- GIT Remote Branch
+- GIT Rebase
+- GIT Web Hosting
+
+Javascript :
+- INTRO
+- Apa itu pemrogaman
+- Bahasa Pemrogaman
+- Compiler Vs  Interpreter
+- Kenapa Javascript
+- Sejarah Javascript
+- Lingkungan Pengembangan Javascript
+- Nilai dan Type Data Javascript
+- Tipe data Javascript : Angka
+- Operator pada Javascript
+- Tipe data Javascript : STRING
+- Tipe data Javascript : BOOLEAN
+- Variable pada Javascript
+- Menulis Javascript
+- Javascript : Pop Up Box
+- Javascript : Control Flow 
+- Javascript : While
+- Looping : Tabel Penelusuran
+- Javascript  : For
+- Pengkondisian : IF ELSE
+- Pengkodisian : ELSE IF
+- Latihan pengkondisian IF & ELSE IF 
+- Javascript Pengkondisian : Switch 
+- Latihan Javasrcipt : Game Suit Jawa
+- Javascript : Apa Itu Function
+- Javascript Function : Membuat dan Menjalankan Function
+- Javascript Function : Parameter dan Argument
+- Javascript Refactoring
+- Javascript Scope
+- Javascript Rekursif
+- Javascript Function : Declaration dan Expression
+- Javascript : ARRAY
+- Javascript : Manipulasi ARRAY
+- Javascript : Slice & Splice
+- Javascript : Foreach & Map
+- Javascript : Filter & Find
+- Javascript : Membuat program angkot sederhana part 1
+- Javascript : Membuat program angkot sederhana part 2 (Latihan-12)
+- Javascript : OBJECT
+- Javascript : Membuat OBJECT
