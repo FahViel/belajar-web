@@ -97,3 +97,4 @@ Javascript :
 - Javascript : OBJECT
 - Javascript : Membuat OBJECT
 - Test JS Hendro 
+- Javascript Object : This
