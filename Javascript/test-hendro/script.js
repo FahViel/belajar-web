@@ -42,3 +42,14 @@ for ( i = 1; i < nomor3.length; i++) {
 
 console.log(nilaiTerbesar); 
 
+// n = 10, menampilkan bilangan dan menjumlahkan nya 
+
+const n = 10;
+
+let total = 0;
+for (let i = 1; i <= n; i++) {
+  console.log(i);
+  total += i;
+}
+
+console.log(total);
