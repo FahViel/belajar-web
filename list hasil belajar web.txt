@@ -98,3 +98,4 @@ Javascript :
 - Javascript : Membuat OBJECT
 - Test JS Hendro 
 - Javascript Object : This
+- Javascript Object : Latihan Object (latihan-16)
