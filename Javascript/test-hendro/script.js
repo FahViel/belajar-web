@@ -50,9 +50,7 @@ var output = "";
 
 for ( i = 1; i <= n; i++) {
   sum += i;
-  if (i == 2) continue; {
-    output += i + " + ";
-  }
+  output += i + " + ";
 }
 
 output = output.substring(0, output.length - 3);
