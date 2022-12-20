@@ -44,12 +44,16 @@ console.log(nilaiTerbesar);
 
 // n = 10, menampilkan bilangan dan menjumlahkan nya 
 
-const n = 10;
+var n = 10;
+var sum = 0;
+var output = "";
 
-let total = 0;
-for (let i = 1; i <= n; i++) {
-  console.log(i);
-  total += i;
+for ( i = 1; i <= n-1; i++) {
+  if (i == 2) continue; {
+    sum += i;
+    output += i + " + ";
+  }
 }
 
-console.log(total);
+output = output.substring(0, output.length - 3);
+console.log(output + " = " + sum);
