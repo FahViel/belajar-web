@@ -106,3 +106,4 @@ Javascript DOM :
 - DOM : Selection #1
 - DOM : Selection #2
 - DOM : Manipulation #1
+- DOM : Manipulation #2
