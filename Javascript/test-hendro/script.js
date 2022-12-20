@@ -48,9 +48,9 @@ var n = 10;
 var sum = 0;
 var output = "";
 
-for ( i = 1; i <= n-1; i++) {
+for ( i = 1; i <= n; i++) {
+  sum += i;
   if (i == 2) continue; {
-    sum += i;
     output += i + " + ";
   }
 }
