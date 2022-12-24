@@ -108,3 +108,4 @@ Javascript DOM :
 - DOM : Manipulation #1
 - DOM : Manipulation #2
 - DOM : Events
+- DOM : Bermain dengan warna (latihan-4/Latihan DOM 1)
