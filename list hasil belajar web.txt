@@ -109,3 +109,4 @@ Javascript DOM :
 - DOM : Manipulation #2
 - DOM : Events
 - DOM : Bermain dengan warna (latihan-4/Latihan DOM 1)
+- DOM : Membuat Game Suwit Jawa (latihan-5)
