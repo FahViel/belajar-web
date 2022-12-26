@@ -111,3 +111,5 @@ Javascript DOM :
 - DOM : Bermain dengan warna (latihan-4/Latihan DOM 1)
 - DOM : Membuat Game Suwit Jawa (latihan-5)
 - DOM : Traversal
+- DOM : Prevent Default
+- DOM : Event bubbling
