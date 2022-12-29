@@ -113,3 +113,4 @@ Javascript DOM :
 - DOM : Traversal
 - DOM : Prevent Default
 - DOM : Event bubbling
+- DOM : Membuat Image Gallery (latihan-8)
