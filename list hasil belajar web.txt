@@ -114,3 +114,6 @@ Javascript DOM :
 - DOM : Prevent Default
 - DOM : Event bubbling
 - DOM : Membuat Image Gallery (latihan-8)
+
+Javascript Lanjutan :
+- Object Revisited
