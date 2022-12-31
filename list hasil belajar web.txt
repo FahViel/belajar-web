@@ -116,4 +116,4 @@ Javascript DOM :
 - DOM : Membuat Image Gallery (latihan-8)
 
 Javascript Lanjutan :
-- Object Revisited
+- Javascript : Object.create()
