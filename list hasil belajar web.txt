@@ -117,3 +117,4 @@ Javascript DOM :
 
 Javascript Lanjutan :
 - Javascript : Object.create()
+- Javascript : Prototype
