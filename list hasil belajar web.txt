@@ -119,3 +119,4 @@ Javascript Lanjutan :
 - Javascript : Object.create()
 - Javascript : Prototype
 - Javascript : Execution Context, Hoisting & Scope
+- Javascript : Closure
