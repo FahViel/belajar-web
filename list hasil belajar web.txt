@@ -120,3 +120,4 @@ Javascript Lanjutan :
 - Javascript : Prototype
 - Javascript : Execution Context, Hoisting & Scope
 - Javascript : Closure
+- Javascript : Arrow Function
