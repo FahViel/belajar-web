@@ -121,3 +121,4 @@ Javascript Lanjutan :
 - Javascript : Execution Context, Hoisting & Scope
 - Javascript : Closure
 - Javascript : Arrow Function
+- Javascript : this pada Arrow Function
