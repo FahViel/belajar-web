@@ -122,3 +122,4 @@ Javascript Lanjutan :
 - Javascript : Closure
 - Javascript : Arrow Function
 - Javascript : this pada Arrow Function
+- Javascript : Higher Order Function
