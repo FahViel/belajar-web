@@ -123,3 +123,5 @@ Javascript Lanjutan :
 - Javascript : Arrow Function
 - Javascript : this pada Arrow Function
 - Javascript : Higher Order Function
+- Javascript : Filter, Map & Reduce
+- Javascript : Latihan Filter, Map & Reduce
