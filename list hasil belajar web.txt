@@ -125,3 +125,4 @@ Javascript Lanjutan :
 - Javascript : Higher Order Function
 - Javascript : Filter, Map & Reduce
 - Javascript : Latihan Filter, Map & Reduce
+- javascript : Template Literals
