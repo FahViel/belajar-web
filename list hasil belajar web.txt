@@ -126,3 +126,4 @@ Javascript Lanjutan :
 - Javascript : Filter, Map & Reduce
 - Javascript : Latihan Filter, Map & Reduce
 - Javascript : Template Literals (Latihan)
+- Javascript : Tagged Template Literals

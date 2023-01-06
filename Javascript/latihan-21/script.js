@@ -75,30 +75,61 @@
 
 // 4. Nested
 // HTML Fragment Bersarang
-const mhs = {
-  nama: `Fahri`,
-  semester: 5,
-  mataKuliah : [
-    'Rekayasa Web',
-    `RPL`, 
-    `Pemrogaman sistem Interaktif`, 
-    `PBO`
-  ]
+// const mhs = {
+//   nama: `Fahri`,
+//   semester: 5,
+//   mataKuliah : [
+//     'Rekayasa Web',
+//     `RPL`, 
+//     `Pemrogaman sistem Interaktif`, 
+//     `PBO`
+//   ]
+// }
+
+// function cetakMataKuliah(mataKuliah) {
+//   return `
+//     <ol>
+//       ${mataKuliah.map( mk => `<li>${mk}</li>`).join('')}
+//     </ol>
+//   `
+// }
+
+// const el = `<div class="mhs">
+//   <h2>${mhs.nama}</h2>
+//   <span class="semester">Semester : ${mhs.semester}</span>
+//   <h4>Mata Kuliah :</h4>
+//   ${cetakMataKuliah(mhs.mataKuliah)}
+// </div>`
+
+// document.body.innerHTML = el
+
+
+// Tagged Template
+// const nama = 'Fahri'
+// const umur = 25
+
+// function coba(strings, ...values) {
+//   // let result = ``
+//   // strings.forEach((str, i) => {
+//   //   result += `${str} ${values[i] || ''}`
+//   // })
+//   // return result
+
+//   return strings.reduce((result, str, i) => `${result}${str}${values[i] || ''}`, '')
+// }
+
+// const str = coba`halo, nama saya ${nama}, saya ${umur} tahun.`
+
+// console.log(str);
+
+// Highlight
+const nama = 'Fahri'
+const umur = 25
+const email = `fahri@gmail.com`
+
+function Highlight(strings, ...values) {
+  return strings.reduce((result, str, i) => `${result}${str}<span class="highlight">${values[i] || ''}</span>`, '')
 }
 
-function cetakMataKuliah(mataKuliah) {
-  return `
-    <ol>
-      ${mataKuliah.map( mk => `<li>${mk}</li>`).join('')}
-    </ol>
-  `
-}
-
-const el = `<div class="mhs">
-  <h2>${mhs.nama}</h2>
-  <span class="semester">Semester : ${mhs.semester}</span>
-  <h4>Mata Kuliah :</h4>
-  ${cetakMataKuliah(mhs.mataKuliah)}
-</div>`
-
-document.body.innerHTML = el
+const str = Highlight`halo, nama saya ${nama}, saya ${umur} tahun dan email saya adalah : ${email}`
+document.body.innerHTML = str
