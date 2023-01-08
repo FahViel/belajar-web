@@ -130,3 +130,4 @@ Javascript Lanjutan :
 - Javascript : Destructuring Assignment
 - Javascript : Destructuring Function
 - Javascript : for..of VS for..in
+- Javascript : Spread Operator
