@@ -129,3 +129,4 @@ Javascript Lanjutan :
 - Javascript : Tagged Template Literals
 - Javascript : Destructuring Assignment
 - Javascript : Destructuring Function
+- Javascript : for..of VS for..in
