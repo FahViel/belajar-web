@@ -127,3 +127,5 @@ Javascript Lanjutan :
 - Javascript : Latihan Filter, Map & Reduce
 - Javascript : Template Literals (Latihan)
 - Javascript : Tagged Template Literals
+- Javascript : Destructuring Assignment
+- Javascript : Destructuring Function
