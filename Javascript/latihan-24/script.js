@@ -25,7 +25,56 @@
 // const mhs = [...liMhs].map(m => m.textContent)
 // console.log(mhs);
 
-const nama = document.querySelector('.nama')
-const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('')
+// const nama = document.querySelector('.nama')
+// const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('')
 
-nama.innerHTML = huruf
+// nama.innerHTML = huruf
+
+// Rest paramter
+
+// function myFunc(...myArgs) {
+//     // return `a = ${a}, b = ${b}, myArgs = ${myArgs}`
+//     // return myArgs
+//     // return Array.from(arguments)
+
+// }
+// console.log(myFunc(1, 2, 3, 4, 5));
+
+// function jumlahKan(...angka) {
+//     // let total = 0;
+
+//     // for (const a of angka){
+//     //     total += a;
+//     // }
+
+//     // return total
+
+//     return angka.reduce((a, b) => a + b)
+// }
+
+// console.log(jumlahKan(1, 2, 3, 4, 5));
+
+// Array Destructuring
+// const kelompok1 = [`Muhammad`, `Fahri`, `Maulana`, `Zidan`, `Al-Aziz`]
+// const [ketua, wakil, ...anggota] = kelompok1
+
+// console.log(anggota);
+
+// Object Destructuring
+// const team = {
+//     pm : `Muhammad`,
+//     frontEnd1 : `Fahri`,
+//     frontEnd2 : `Maulana`,
+//     backEnd : `Zidan`,
+//     ux : `Al-aziz`,
+//     devOps : `Rahmatullah`
+// }
+
+// const {pm, ...myteam} = team
+// console.log(myteam);
+
+// filtering
+function filterBy(type, ...values) {
+    return values.filter(v => typeof v === type)
+}
+console.log(filterBy(`boolean`, 1, 2, `Fahri`, false, 10, true, `Maulana`));
