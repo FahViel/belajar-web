@@ -132,3 +132,4 @@ Javascript Lanjutan :
 - Javascript : for..of VS for..in
 - Javascript : Spread Operator
 - Javascript : Rest Parameter
+- Javascript : Asynchronous Javascript
