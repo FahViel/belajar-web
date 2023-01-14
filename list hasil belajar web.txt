@@ -135,3 +135,5 @@ Javascript Lanjutan :
 - Javascript : Asynchronous Javascript
 - Javascript : Callback
 - Javascript : Promises
+- Javascript : Callback latihan
+- Javascript : Fetch
