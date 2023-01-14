@@ -134,3 +134,4 @@ Javascript Lanjutan :
 - Javascript : Rest Parameter
 - Javascript : Asynchronous Javascript
 - Javascript : Callback
+- Javascript : Promises
