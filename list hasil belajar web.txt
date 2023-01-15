@@ -138,3 +138,10 @@ Javascript Lanjutan :
 - Javascript : Callback latihan
 - Javascript : Fetch
 - Javascript : Fetch Refactor
+- Javascript : Async Await
+- Javascript : Error Handling
+
+--  Sesi Belajar Fundamental Front End Web Berakhir --
+
+Belajar React JS :
+- 
