@@ -137,3 +137,4 @@ Javascript Lanjutan :
 - Javascript : Promises
 - Javascript : Callback latihan
 - Javascript : Fetch
+- Javascript : Fetch Refactor
