@@ -31,15 +31,30 @@
 // Refactoring
 const searchButton = document.querySelector('.search-button')
 searchButton.addEventListener(`click`, async function () {
-  const inputKeyword = document.querySelector(`.input-keyword`)
-  const movies = await getMovies(inputKeyword.value)
+  try {
+    const inputKeyword = document.querySelector(`.input-keyword`)
+    const movies = await getMovies(inputKeyword.value)
   updateUI(movies)
+  } catch(err){
+    // console.log(err);
+    alert(err)
+  }
 })
 
 function getMovies(keyword) {
   return fetch(`http://www.omdbapi.com/?apikey=420c5c51&s=` + keyword)
-    .then((response) => response.json())
-    .then((response) => response.Search)
+    .then((response) => {
+      if( !response.ok){
+        throw new Error(response.statusText)
+      }
+      return response.json()
+    })
+    .then((response) => {
+      if( response.Response === `False`){
+        throw new Error(response.Error)
+      }
+      return response.Search
+    })
 }
 
 function updateUI(movies) {
@@ -49,15 +64,9 @@ function updateUI(movies) {
   movieContainer.innerHTML = cards
 }
 
-// Ketika tombol detail di klik
-// Event Binding
-document.addEventListener(`click`, async function (e) {
-  if (e.target.classList.contains(`modal-detail-button`)) {
-    const imdbid = e.target.dataset.imdbid
-    const movieDetail = await getMovieDetail(imdbid)
-    updateUIDetail(movieDetail)
-  }
-})
+
+
+////////////////////////////////
 
 function getMovieDetail(imdbid) {
   return fetch(`http://www.omdbapi.com/?apikey=420c5c51&i=` + imdbid)
@@ -70,6 +79,18 @@ function updateUIDetail(m) {
   const modalBody = document.querySelector(`.modal-body`)
   modalBody.innerHTML = movieDetail
 }
+
+// Ketika tombol detail di klik
+// Event Binding
+document.addEventListener(`click`, async function (e) {
+  if (e.target.classList.contains(`modal-detail-button`)) {
+    const imdbid = e.target.dataset.imdbid
+    const movieDetail = await getMovieDetail(imdbid)
+    updateUIDetail(movieDetail)
+  }
+})
+
+
 
 // Function Data Movies
 function showCards(m) {
