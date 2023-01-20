@@ -144,4 +144,4 @@ Javascript Lanjutan :
 --  Sesi Belajar Fundamental Front End Web Berakhir --
 
 Belajar React JS :
-- 
+- Fundamental React JS
