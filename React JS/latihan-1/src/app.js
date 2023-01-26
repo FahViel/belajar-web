@@ -1,34 +1,36 @@
 const root = document.querySelector(`#root`)
 
-
 function App(){
-  const [diKlik, setDiKlik] = React.useState(false)
-  const [count, setCount] = React.useState(0)
+  const [activity, setActivity] = React.useState(``)
+  const [todos, setTodos] = React.useState([]) 
 
-  
-  React.useEffect( () => {
-    console.log(document.getElementById(`judul`))
-  }, [])
+  function addTodoHandler(event){
+    event.preventDefault()
+
+    setTodos([...todos, activity])
+    setActivity(``)
+  }
 
   return (
-  <div>
-    <h1 id="judul">Hello Ini Judul</h1>
-
-    <button onClick={ () => {
-      setDiKlik(true)
-    }}>
-      Klik aku
-    </button>
-
-    <button onClick={ () => {
-      setCount(count + 1)
-    }}>
-      Tambah
-    </button>
-    Nilai saat Ini : {count}
-  </div>
-  
-  
+    <div>
+      <h1>Simple Todo list</h1>
+      <form onSubmit={addTodoHandler}>
+        <input 
+        type="text" 
+        placeholder="Nama Aktifitas" 
+        value={activity}
+        onChange={ (event) => {
+          setActivity(event.target.value)
+        } }/>
+        <button type="submit">Tambahkan</button>
+      </form>
+      <ul>
+        {todos.map((todo) => {
+          return <li key={todo}>{todo}</li>
+        })}
+        
+      </ul>
+    </div>
   )
 }
 

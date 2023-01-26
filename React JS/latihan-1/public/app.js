@@ -1,20 +1,27 @@
 const root = document.querySelector(`#root`);
 function App() {
-  const [diKlik, setDiKlik] = React.useState(false);
-  const [count, setCount] = React.useState(0);
-  React.useEffect(() => {
-    console.log(document.getElementById(`judul`));
-  }, [diKlik, count]);
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
-    id: "judul"
-  }, "Hello Ini Judul"), /*#__PURE__*/React.createElement("button", {
-    onClick: () => {
-      setDiKlik(true);
+  const [activity, setActivity] = React.useState(``);
+  const [todos, setTodos] = React.useState([]);
+  function addTodoHandler(event) {
+    event.preventDefault();
+    setTodos([...todos, activity]);
+    setActivity(``);
+  }
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Simple Todo list"), /*#__PURE__*/React.createElement("form", {
+    onSubmit: addTodoHandler
+  }, /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    placeholder: "Nama Aktifitas",
+    value: activity,
+    onChange: event => {
+      setActivity(event.target.value);
     }
-  }, "Klik aku"), /*#__PURE__*/React.createElement("button", {
-    onClick: () => {
-      setCount(count + 1);
-    }
-  }, "Tambah"), "Nilai saat Ini : ", count);
+  }), /*#__PURE__*/React.createElement("button", {
+    type: "submit"
+  }, "Tambahkan")), /*#__PURE__*/React.createElement("ul", null, todos.map(todo => {
+    return /*#__PURE__*/React.createElement("li", {
+      key: todo
+    }, todo);
+  })));
 }
 ReactDOM.render( /*#__PURE__*/React.createElement(App, null), root);
