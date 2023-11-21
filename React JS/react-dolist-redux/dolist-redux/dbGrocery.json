@@ -13,10 +13,22 @@
       "checked": false
     },
     {
-      "id": 3,
       "name": "Teh",
-      "quantity": 5,
-      "checked": false
+      "quantity": 8,
+      "checked": false,
+      "id": 3
+    },
+    {
+      "name": "Gula",
+      "quantity": 11,
+      "checked": false,
+      "id": 4
+    },
+    {
+      "name": "Merica Bubuk",
+      "quantity": 16,
+      "checked": false,
+      "id": 5
     }
   ]
 }
