@@ -1,0 +1,104 @@
+import { useEffect, useState } from 'react'
+
+// Import Redux
+import { useSelector, useDispatch } from 'react-redux'
+import { getItem, itemSelector, deleteItem } from './features/GrocerySlice'
+
+export default function App() {
+  return (
+    <>
+      <Header />
+      <Form />
+      <Grocery />
+      <Footer />
+    </>
+  )
+}
+
+function Header() {
+  return (
+    <div>
+      <h1>Catatan Belanjaku 📝</h1>
+    </div>
+  )
+}
+
+function Form() {
+  return (
+    <>
+      <form className="add-form">
+        <h3>Hari ini belanja apa kita?</h3>
+        <div>
+          <select></select>
+          <input type="text" placeholder="nama barang..." />
+        </div>
+        <button>Tambah</button>
+      </form>
+    </>
+  )
+}
+
+function Item({ item, onToogleItem }) {
+  const dispatch = useDispatch()
+
+  return (
+    <>
+      <li key={item.id}>
+        <input type="checkbox" checked={item.checked} onChange={() => onToogleItem(item.id)}/>
+        <span style={item.checked ? {textDecoration: `line-through`} : {}}>
+          {item.quantity} {item.name}
+        </span>
+        <button onClick={() => dispatch(deleteItem(item.id))}>&times;</button>
+      </li>
+    </>
+  )
+}
+
+function Grocery() {
+  const dispatch = useDispatch()
+  const listItems = useSelector(itemSelector.selectAll)
+
+  useEffect(() => {
+    dispatch(getItem())
+  }, [dispatch])
+
+  const [items, setItems] = useState(listItems)
+  
+  useEffect(() => {
+    setItems(listItems)
+  }, [listItems])
+
+  console.log(items)
+
+  function handleToogleItem( id ){
+    setItems((items) => items.map((item) => (item.id === id ? {...item, checked: !item.checked} : item)))
+  }
+
+  return (
+    <>
+      <div className="list">
+        <ul>
+          {items.map((item) => (
+            <Item item={item} key={item.id} onToogleItem={handleToogleItem} />
+          ))}
+        </ul>
+      </div>
+      <div className="actions">
+        <select>
+          <option value="input">Urutkan berdasarkan urutan input</option>
+          <option value="name">Urutkan berdasarkan nama barang</option>
+          <option value="checked">Urutkan berdasarkan ceklis</option>
+        </select>
+        <button>Bersihkan Daftar</button>
+      </div>
+    </>
+  )
+}
+
+function Footer() {
+  return (
+    <>
+      <footer className="stats">Ada barang di daftar belanjaan, barang sudah dibeli (100%)</footer>
+    </>
+  )
+}

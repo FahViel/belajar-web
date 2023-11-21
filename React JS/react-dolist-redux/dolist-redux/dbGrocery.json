@@ -1,0 +1,22 @@
+{
+  "groceryItems": [
+    {
+      "id": 1,
+      "name": "Kopi Bubuk",
+      "quantity": 10,
+      "checked": false
+    },
+    {
+      "id": 2,
+      "name": "Mie Instan",
+      "quantity": 15,
+      "checked": false
+    },
+    {
+      "id": 3,
+      "name": "Teh",
+      "quantity": 5,
+      "checked": false
+    }
+  ]
+}
