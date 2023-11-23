@@ -42,7 +42,6 @@ function Form() {
 
     setName('')
     setQuantity(1)
-    
   }
   
 
