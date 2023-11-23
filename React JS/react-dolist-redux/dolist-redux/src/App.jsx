@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 
@@ -42,7 +44,6 @@ function Form() {
 
     setName('')
     setQuantity(1)
-    
   }
   
 
@@ -63,13 +64,13 @@ function Form() {
   )
 }
 
-function Item({ item, onToogleItem }) {
+function Item({ item, onToggleItem }) {
   const dispatch = useDispatch()
   
   return (
     <>
       <li key={item.id}>
-        <input type="checkbox" checked={item.checked} onChange={() => onToogleItem(item.id)}/>
+        <input type="checkbox" checked={item.checked} onChange={() => onToggleItem(item.id)}/>
         <span style={item.checked ? {textDecoration: `line-through`} : {}}>
           {item.quantity} {item.name}
         </span>
@@ -89,32 +90,54 @@ function Grocery() {
 
   const [items, setItems] = useState(listItems)
   
+  
   useEffect(() => {
     setItems(listItems)
   }, [listItems])
 
-  console.log(items)
+  function handleToggleItem( id ){
+    setItems((items) => 
+    items.map((item) => 
+    (item.id === id ? {...item, checked: !item.checked} : item)))
+  }
 
-  function handleToogleItem( id ){
-    setItems((items) => items.map((item) => (item.id === id ? {...item, checked: !item.checked} : item)))
+
+  // Handle sorted items
+  const [sortBy, setSortBy] = useState('input')
+  
+  let sortedItems = [...items]
+
+  switch (sortBy) {
+    case 'name':
+      sortedItems = items.slice().sort((a, b) => a.name.localeCompare(b.name))
+    break
+    
+    case 'checked':
+      sortedItems = items.slice().sort((a, b) => a.checked - b.checked)
+    break
+  }
+
+  // Handle Clears Item
+  function handleClearsItems(){
+    setItems([])
   }
 
   return (
     <>
       <div className="list">
         <ul>
-          {items.map((item) => (
-            <Item item={item} key={item.id} onToogleItem={handleToogleItem} />
+          {sortedItems.map((item) => (
+            <Item item={item} key={item.id} onToggleItem={handleToggleItem} />
           ))}
         </ul>
       </div>
       <div className="actions">
-        <select>
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="input">Urutkan berdasarkan urutan input</option>
           <option value="name">Urutkan berdasarkan nama barang</option>
           <option value="checked">Urutkan berdasarkan ceklis</option>
         </select>
-        <button>Bersihkan Daftar</button>
+        <button onClick={handleClearsItems}>Bersihkan Daftar</button>
       </div>
     </>
   )

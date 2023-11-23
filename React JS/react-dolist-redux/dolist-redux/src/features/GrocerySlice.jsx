@@ -15,9 +15,8 @@ export const deleteItem = createAsyncThunk('groceryItem/deleteItem', async (id) 
 })
 
 // Handle input data
-export const inputItem = createAsyncThunk('groceryItem/inputItem', async ({ id, name, quantity, checked }) => {
+export const inputItem = createAsyncThunk('groceryItem/inputItem', async ({ name, quantity, checked }) => {
     const response = await axios.post('http://localhost:3000/groceryItems', {
-    id,
     name,
     quantity,
     checked
@@ -27,7 +26,7 @@ export const inputItem = createAsyncThunk('groceryItem/inputItem', async ({ id, 
 
 
 const itemEntity = createEntityAdapter({
-    selectId: (groceryItems) => (groceryItems.id)
+    selectId: (item) => (item.id)
 })
 
 const itemSlice = createSlice({
@@ -39,7 +38,7 @@ const itemSlice = createSlice({
         }),
         builder.addCase(deleteItem.fulfilled, (state,action) => {
             itemEntity.removeOne(state, action.payload)
-        })
+        }),
         builder.addCase(inputItem.fulfilled, (state, action) => {
             itemEntity.addOne(state, action.payload)
         })

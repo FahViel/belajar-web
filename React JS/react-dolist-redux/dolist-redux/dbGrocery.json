@@ -29,6 +29,18 @@
       "quantity": 16,
       "checked": false,
       "id": 5
+    },
+    {
+      "name": "Kacang",
+      "quantity": 42,
+      "checked": false,
+      "id": 6
+    },
+    {
+      "name": "Merica",
+      "quantity": 10,
+      "checked": false,
+      "id": 8
     }
   ]
 }
