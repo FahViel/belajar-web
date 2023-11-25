@@ -1,46 +1,28 @@
 {
   "groceryItems": [
     {
-      "id": 1,
-      "name": "Kopi Bubuk",
-      "quantity": 10,
-      "checked": false
-    },
-    {
-      "id": 2,
-      "name": "Mie Instan",
-      "quantity": 15,
-      "checked": false
+      "name": "goodayfreeze",
+      "quantity": 7,
+      "checked": false,
+      "id": 1
     },
     {
       "name": "Teh",
-      "quantity": 8,
+      "quantity": 3,
+      "checked": false,
+      "id": 2
+    },
+    {
+      "name": "Roko",
+      "quantity": 13,
       "checked": false,
       "id": 3
     },
     {
-      "name": "Gula",
+      "name": "Korek",
       "quantity": 11,
       "checked": false,
       "id": 4
-    },
-    {
-      "name": "Merica Bubuk",
-      "quantity": 16,
-      "checked": false,
-      "id": 5
-    },
-    {
-      "name": "Kacang",
-      "quantity": 42,
-      "checked": false,
-      "id": 6
-    },
-    {
-      "name": "Merica",
-      "quantity": 10,
-      "checked": false,
-      "id": 8
     }
   ]
 }
