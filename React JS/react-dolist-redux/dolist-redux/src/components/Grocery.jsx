@@ -34,7 +34,7 @@ export default function Grocery() {
     const [sortBy, setSortBy] = useState('input')
     
     let sortedItems = [...items]
-  
+    
     switch (sortBy) {
       case 'name':
         sortedItems = items.slice().sort((a, b) => a.name.localeCompare(b.name))
