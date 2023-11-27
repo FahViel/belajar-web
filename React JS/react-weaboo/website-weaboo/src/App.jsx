@@ -33,17 +33,28 @@ export default function App() {
     }
   }, [animesData])
 
+  
+
   function handleSelectedAnime(id) {
     const newAnime = animes.find((anime) => anime.id === id)
     setSelectedAnime(newAnime)
   }
 
+// Handle Search Input
+  const [query, setQuery] = useState('')
+  let sortedAnimes = [...animes]
+
+  if (query.length > 0) {
+    sortedAnimes = animes.filter((anime) => anime.title.toLowerCase().includes(query.toLowerCase()))
+  }
+
+  
   return (
     <>
       {/* Header Section */}
       <div className="header">
         <NavBar>
-          <Search>
+          <Search animes={animes} query={query} setQuery={setQuery} >
             <NumResult animes={animes} />
           </Search>
         </NavBar>
@@ -54,7 +65,7 @@ export default function App() {
       <div className="body">
         <Main>
           <Box>
-            <AnimeList animes={animes} onSelectedAnime={handleSelectedAnime} />
+            <AnimeList animes={animes} onSelectedAnime={handleSelectedAnime} sortedAnimes={sortedAnimes} />
           </Box>
           <Box>
             <AnimeDetail selectedAnime={selectedAnime} />
