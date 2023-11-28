@@ -6,23 +6,32 @@ import Footer from "./Footer"
 
 // Import Redux
 import { useSelector, useDispatch } from 'react-redux'
-import { getItem, itemSelector, deleteAllItem } from '../features/GrocerySlice'
+import { getItem, itemSelector } from '../features/GrocerySlice'
 
 
 export default function Grocery() {
+
+  // Handle getItem from redux
     const dispatch = useDispatch()
     const listItems = useSelector(itemSelector.selectAll)
   
     useEffect(() => {
       dispatch(getItem())
     }, [dispatch])
+
+
   
+    // State grocery item with data from redux store
     const [items, setItems] = useState(listItems)
   
     useEffect(() => {
       setItems(listItems)
     }, [listItems])
   
+
+
+
+    // Handle chekclist item
     function handleToggleItem( id ){
       setItems((items) => 
       items.map((item) => 
@@ -45,22 +54,14 @@ export default function Grocery() {
       break
     }
 
+
+
+
     //  Handle Clears Item
-    const [clearItems, setClearsItem] = useState(listItems)
-
-    useEffect(() => {
-      setClearsItem(listItems)
-    }, [listItems])
-
-    if(clearItems.length > 0){
-      setClearsItem([])
+    const clearItems = () => {
+      setItems([])
     }
-
-    // const handleClearsItem = () => {
-    //   dispatch(deleteAllItem())
-    // }
-
-    console.log(clearItems)
+    
 
     return (
       <>
@@ -77,7 +78,7 @@ export default function Grocery() {
             <option value="name">Urutkan berdasarkan nama barang</option>
             <option value="checked">Urutkan berdasarkan ceklis</option>
           </select>
-          <button onClick={setClearsItem}>Bersihkan Daftar</button>
+          <button onClick={clearItems}>Bersihkan Daftar</button>
         </div>
         <Footer items={items} />
       </>

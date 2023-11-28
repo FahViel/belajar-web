@@ -23,11 +23,6 @@ export const inputItem = createAsyncThunk('groceryItem/inputItem', async ({ name
   return response.data
 })
 
-// Handle clear all items
-export const deleteAllItem = createAsyncThunk('groceryItem/deleteAllItem', async () => {
-  await axios.delete(`http://localhost:3000/groceryItems`)
-})
-
 const itemEntity = createEntityAdapter({
   selectId: (item) => item.id,
 })
@@ -44,11 +39,8 @@ const itemSlice = createSlice({
       }),
       builder.addCase(inputItem.fulfilled, (state, action) => {
         itemEntity.addOne(state, action.payload)
-      }),
-      builder.addCase(deleteAllItem.fulfilled, (state, action) => {
-        itemEntity.removeAll(state, action.payload)
       })
-  },
+  }
 })
 
 export const itemSelector = itemEntity.getSelectors((state) => state.item)
