@@ -45,12 +45,22 @@ export default function Grocery() {
       break
     }
 
-    const handleClearsItem = () => {
-      if(listItems.length > 0){
-        dispatch(deleteAllItem())
-      }
+    //  Handle Clears Item
+    const [clearItems, setClearsItem] = useState(listItems)
+
+    useEffect(() => {
+      setClearsItem(listItems)
+    }, [listItems])
+
+    if(clearItems.length > 0){
+      setClearsItem([])
     }
 
+    // const handleClearsItem = () => {
+    //   dispatch(deleteAllItem())
+    // }
+
+    console.log(clearItems)
 
     return (
       <>
@@ -67,7 +77,7 @@ export default function Grocery() {
             <option value="name">Urutkan berdasarkan nama barang</option>
             <option value="checked">Urutkan berdasarkan ceklis</option>
           </select>
-          <button onClick={handleClearsItem}>Bersihkan Daftar</button>
+          <button onClick={setClearsItem}>Bersihkan Daftar</button>
         </div>
         <Footer items={items} />
       </>
